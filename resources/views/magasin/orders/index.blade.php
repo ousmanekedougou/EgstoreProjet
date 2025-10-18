@@ -4,18 +4,16 @@
   <div class="mb-9">
     <div class="row g-3 mb-4">
       <div class="col-auto">
-        <h2 class="mb-0">Commandes</h2>
+        <h2 class="mb-0">Toutes vos commandes</h2>
       </div>
     </div>
     <div id="orderTable" data-list='{"valueNames":["order","total","customer","payment_status","fulfilment_status","delivery_type","date"]}'>
       <div class="mb-4">
         <div class="row g-3">
-          <div class="col-auto">
-            <div class="search-box" style="width: 100%;">
-              <form class="position-relative"><input class="form-control search-input search" type="search" placeholder="Rechercher un commande" aria-label="Search" />
-                <span class="fas fa-search search-box-icon"></span>
-              </form>
-            </div>
+          <div class="search-box" style="width: 100%;">
+            <form class="position-relative"><input class="form-control search-input search" type="search" placeholder="Rechercher un commande" aria-label="Search" />
+              <span class="fas fa-search search-box-icon"></span>
+            </form>
           </div>
         </div>
       </div>

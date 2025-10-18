@@ -51,7 +51,7 @@ class HomeController extends Controller
         // }
         // Toastr()->success('Votre commande de devis a bien été ajouté', 'Ajout de commande', ["positionClass" => "toast-top-right"]);
         return view('magasin.home',[
-            'products' => Product::where('magasin_id',AuthMagasinAgent())->where('visible',1)->paginate(20),
+            'products' => Product::where('magasin_id',AuthMagasinAgent())->where('visible',1)->get(),
             'paimentNotification' => $paimentNotification,
             'isPaymentDay'        => $isPaymentDay,
             'commandes'           => $commandes,

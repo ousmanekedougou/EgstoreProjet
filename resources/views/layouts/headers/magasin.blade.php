@@ -15,7 +15,7 @@
         <div class="container-small d-flex flex-between-center" data-navbar="data-navbar">
           <div class="dropdown">
             <button class="btn text-body ps-0 pe-5 text-nowrap dropdown-toggle dropdown-caret-none" data-category-btn="data-category-btn" data-bs-toggle="dropdown">
-              <span data-feather="align-justify" class=""></span> 
+              <span data-feather="shopping-bag" class=""></span> 
               <span class="showCategory" style="line-height:normal;">Produits par catégorie</span> 
             </button>
             <div class="dropdown-menu border border-translucent py-0 category-dropdown-menu">

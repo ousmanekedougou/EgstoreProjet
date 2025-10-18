@@ -44,9 +44,11 @@
                         <a class="nav-link label-1 {{ set_active_roote('magasin.categorie.index') }}" href="{{ route('magasin.categorie.index') }}" role="button" data-bs-toggle="" aria-expanded="false">
                             <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="menu"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Vos catégories</span></span></div>
                         </a>
+                        {{--
                         <a class="nav-link label-1 {{ set_active_roote('magasin.produit.index') }}" href="{{ route('magasin.produit.index') }}" role="button" data-bs-toggle="" aria-expanded="false">
                             <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="shopping-bag"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Vos produits</span></span></div>
                         </a>
+                        --}}
                     </div><!-- parent pages-->
 
                     <p class="navbar-vertical-label">Géstion des commandes</p>
