@@ -1,0 +1,27 @@
+@media screen and (max-width: 412px) {
+    /* Responsive de la navbar de toutes les pages login  */
+    .loginPageNaveBar{
+        display: none;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+ /* Responsive pour cacher le categorie en mode mobile et aussi le changement de l'icone  */
+    .showCategory{
+        display: none;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    #showTrashedCartInDesktop{
+        display: none;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+}
