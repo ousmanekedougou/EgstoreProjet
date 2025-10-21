@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Magasin\Client;
 use App\Models\Magasin\Commande;
 use App\Models\Magasin\Magasin;
+use App\Models\Magasin\Unite;
 use App\Models\User\User;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
@@ -182,7 +183,11 @@ class BonController extends Controller
      */
     public function show(string $id)
     {
-        return view('magasin.bons.show',['bon' => Commande::where('id',$id)->where('magasin_id',AuthMagasinAgent())->where('type',0)->first()]);
+        return view('magasin.bons.show',
+        [
+            'bon' => Commande::where('id',$id)->where('magasin_id',AuthMagasinAgent())->where('type',0)->first(),
+            'unites'  => Unite::where('magasin_id',AuthMagasinAgent())->where('visible',1)->get()
+        ]);
     }
 
     /**

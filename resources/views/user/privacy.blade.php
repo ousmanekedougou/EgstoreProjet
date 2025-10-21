@@ -31,7 +31,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-skull-crossbones text-danger fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-receipt text-danger fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -51,7 +51,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-stethoscope text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-info-circle text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -72,7 +72,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-lock fa-info text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -93,7 +93,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-hands-helping text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -114,7 +114,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-file-import text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -136,7 +136,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-pencil-ruler text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -167,7 +167,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-pen-nib text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -189,7 +189,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-clock text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -211,7 +211,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-user-cog text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -233,7 +233,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-lock text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -255,7 +255,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-cookie-bite text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -277,7 +277,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fas fa-at text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -290,9 +290,9 @@
                             <p class="fs-9 text-body-secondary w-sm-100 mb-5">
                                 Si vous avez des questions, des préoccupations ou des demandes concernant la présente politique de confidentialité ou vos informations personnelles, veuillez nous contacter à l'adresse suivante :
                                 <br>
-                                <span class="mb-3">Email : [Votre adresse électronique]</span> <br>
-                                <span class="mb-3">Téléphone : [Votre numéro de téléphone]</span> <br>
-                                <span>Adresse : [Votre adresse physique] : [Votre adresse physique]</span>
+                                <span class="mb-3">Email : egstore@egstore.com</span> <br>
+                                <span class="mb-3">Téléphone : 78 195 61 68 / 78 287 59 71</span> <br>
+                                <span>Adresse : Sénégal, Kédougou</span>
 
                             </p>
                         </div>
@@ -304,7 +304,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fab fa-creative-commons-share text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -319,9 +319,7 @@
                             </p>
                             <ul class="fs-9 text-body-secondary w-sm-100">
                                 <li>Informations personnelles : Nom, email, numéro de téléphone, adresse, détails de paiement.</li>
-                                <li>Informations sur l'appareil : Adresse IP, type de navigateur, système d'exploitation.</li>
                                 <li>Données d'utilisation : Pages visitées, produits consultés, temps passé sur la plateforme.</li>
-                                <li>Données de localisation : Emplacement approximatif basé sur l'adresse IP ou le GPS.</li>
                             </ul>
                             <p class="fs-9 text-body-secondary w-sm-100 mb-5">Nous pouvons partager ces informations avec des tiers à des fins telles que l'exécution des commandes, le marketing et l'analyse.</p>
                         </div>
@@ -333,7 +331,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fab fa-slideshare text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -362,7 +360,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fas fa-cloud-upload-alt text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -384,7 +382,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fas fa-user-clock text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -406,7 +404,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fas fa-balance-scale text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -417,7 +415,7 @@
                             <p class="text-body-quaternary fs-9 mb-0 text-nowrap timeline-time"></p>
                             </div>
                             <p class="fs-9 text-body-secondary w-sm-100 mb-5">
-                                En vertu des lois américaines sur la protection de la vie privée, vous avez le droit de :
+                                En vertu des lois sénégalaises sur la protection de la vie privée, vous avez le droit de :
                                 <ul class="fs-9 text-body-secondary w-sm-100">
                                     <li>de demander l'accès à vos informations personnelles</li>
                                     <li>de demander la suppression de vos informations personnelles</li>
@@ -435,7 +433,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fas fa-at text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -448,11 +446,11 @@
                             <p class="fs-9 text-body-secondary w-sm-100">
                             Pour toute question ou préoccupation relative à votre vie privée ou à la présente politique de protection de la vie privée, veuillez nous contacter à l'adresse suivante :
                             <br>
-                                <span class="mb-3">Email : [Votre adresse électronique]</span> <br>
-                                <span class="mb-3">Téléphone : [Votre numéro de téléphone]</span> <br>
-                                <span>Adresse : [Votre adresse physique] : [Votre adresse physique]</span>
+                                <span class="mb-3">Email : egstore@egstore.com</span> <br>
+                                <span class="mb-3">Téléphone : 78 195 61 68 / 78 287 59 71</span> <br>
+                                <span>Adresse : Sénégal, Kédougou</span>
                                 <br>
-                                Nous vous remercions de confier vos données personnelles à [Nom de votre plateforme de commerce électronique]. Nous nous engageons à protéger votre vie privée et à vous offrir une expérience d'achat sûre et agréable.
+                                Nous vous remercions de confier vos données personnelles à egstore. Nous nous engageons à protéger votre vie privée et à vous offrir une expérience d'achat sûre et agréable.
                             </p>
                         </div>
                         </div>
@@ -463,7 +461,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-rocket text-info fs-9"></span></div>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid far fa-arrow-alt-circle-down text-info fs-9"></span></div>
                             </div>
                         </div>
                         <div class="col">

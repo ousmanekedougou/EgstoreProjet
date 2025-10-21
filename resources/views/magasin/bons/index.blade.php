@@ -70,7 +70,7 @@
                             Annulé 
                           @endif 
                         @else 
-                          0 commande 
+                          Pas de produit
                         @endif</span>
                       <span class="ms-1" 
                       @if ($bon->bagages->count() > 0)
@@ -99,7 +99,7 @@
                         Non paye
                       @endif
                     @else
-                      0 commande
+                      Pas de produit
                     @endif
                   </td>
                   <td class="date align-middle white-space-nowrap text-body-tertiary fs-9 ps-4 text-end">{{date('d-m-Y', strtotime( $bon->date ))}}</td>

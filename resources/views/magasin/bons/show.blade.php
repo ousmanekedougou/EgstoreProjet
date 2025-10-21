@@ -1,5 +1,7 @@
 @extends('layouts.app',['title' => 'affichage des bon de commande'])
-
+  @section('headSection')
+  <link href="{{asset('vendors/choices/choices.min.css')}}" rel="stylesheet" />
+  @endsection
 @section('main-content')
   <div class="content">
 
@@ -18,7 +20,7 @@
       <div id="products" data-list='{"valueNames":["product","price","category","tags","vendor","time"],"page":10,"pagination":true}'>
         <div class="mb-4">
           <div class="d-flex flex-wrap gap-3">
-            <div class="search-box" style="width: 100%;">
+            <div class="search-box" style="width: 75%;">
               <form class="position-relative"><input class="form-control search-input search" type="search" placeholder="Rechercher un produit" aria-label="Search" />
                 <span class="fas fa-search search-box-icon"></span>
               </form>
@@ -33,7 +35,7 @@
                   <span class="me-2" data-feather="plus"></span>Ajouter des produits
                 </button>
               @else
-                <h4 class="mb-0">Cette commande de sous reservation a ete anuler</h4>
+                <h4 class="mb-0">Cette commande de sous reservation a ete anuller</h4>
               @endif
             </div>
           </div>
@@ -125,6 +127,32 @@
               </div>
 
               <div class="mb-3 text-start">
+                <label class="form-label" for="quantity">Quantite du produit</label>
+                <input id="quantity" type="numeric" class="form-control @error('quantity') is-invalid @enderror" name="quantity" value="{{ old('quantity') }}" placeholder="Quantite du produit" required autocomplete="quantity">
+
+                @error('quantity')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+              </div>
+
+              <div class="mb-3 text-start">
+                <label class="form-label" for="organizerSingle">Choisire l'unites</label>
+                <select class="form-select @error('unite_id') is-invalid @enderror" name="unite_id" id="organizerSingle" data-choices="data-choices" data-options='{"removeItemButton":true,"placeholder":true}'>
+                  <option value="">Sélectionner un...</option>
+                  @foreach ($unites as $unite)
+                    <option value="{{ old('unite_id') ?? $unite->id }}"> {{ $unite->name }}</option>
+                  @endforeach
+                </select>
+                @error('unite_id')
+                  <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                  </span>
+                @enderror
+              </div>
+
+              <div class="mb-3 text-start">
                 <label class="form-label" for="color">Couleur de votre produit</label>
                 <input id="color" type="text" placeholder="Couleur de votre produit" class="form-control @error('color') is-invalid @enderror" name="color" value="{{ old('color') }}" required autocomplete="color" autofocus>
 
@@ -140,17 +168,6 @@
                 <input id="size" type="text" placeholder="TYaille de votre produit" class="form-control @error('size') is-invalid @enderror" name="size" value="{{ old('size') }}" required autocomplete="size" autofocus>
 
                 @error('size')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-              </div>
-
-              <div class="mb-3 text-start">
-                <label class="form-label" for="quantity">Quantite du produit</label>
-                <input id="quantity" type="numeric" class="form-control @error('quantity') is-invalid @enderror" name="quantity" value="{{ old('quantity') }}" placeholder="Quantite du produit" required autocomplete="quantity">
-
-                @error('quantity')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -284,7 +301,10 @@
   </div>
 @endsection
 
+@section('footerSection')
 <script src="{{ asset('assets/js/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap-tagsinput.js') }}"></script> 
+<script src="{{asset('vendors/choices/choices.min.js')}}"></script>
 <script>
   $(document).ready(function(){
     var i = 0;
@@ -325,3 +345,4 @@
 
   });
 </script>
+@endsection

@@ -48,7 +48,7 @@
             <div class="row g-3">
               <div class="col-auto">
                 <div class="timeline-item-bar position-relative">
-                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-envelope text-danger fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-user-circle text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                 </div>
               </div>
               <div class="col">
@@ -78,7 +78,7 @@
             <div class="row g-3">
               <div class="col-auto">
                 <div class="timeline-item-bar position-relative">
-                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-envelope text-danger fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fab fa-product-hunt text-info fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                 </div>
               </div>
               <div class="col">
@@ -114,7 +114,7 @@
             <div class="row g-3">
               <div class="col-auto">
                 <div class="timeline-item-bar position-relative">
-                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-envelope text-danger fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-user-tie text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                 </div>
               </div>
               <div class="col">
@@ -147,7 +147,7 @@
             <div class="row g-3">
               <div class="col-auto">
                 <div class="timeline-item-bar position-relative">
-                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-envelope text-danger fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-cogs text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                 </div>
               </div>
               <div class="col">
@@ -192,7 +192,7 @@
             <div class="row g-3">
               <div class="col-auto">
                 <div class="timeline-item-bar position-relative">
-                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-video text-info fs-9"></span></div>
+                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-paperclip text-info fs-9"></span></div>
                 </div>
               </div>
               <div class="col">
@@ -218,7 +218,7 @@
             <div class="row g-3">
               <div class="col-auto">
                 <div class="timeline-item-bar position-relative">
-                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-swatchbook text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-user-plus text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                 </div>
               </div>
               <div class="col">
@@ -241,7 +241,7 @@
             <div class="row g-3">
               <div class="col-auto">
                 <div class="timeline-item-bar position-relative">
-                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-skull-crossbones text-danger fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-praying-hands text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                 </div>
               </div>
               <div class="col">
@@ -264,7 +264,7 @@
             <div class="row g-3">
               <div class="col-auto">
                 <div class="timeline-item-bar position-relative">
-                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-stethoscope text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-bell text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                 </div>
               </div>
               <div class="col">
@@ -287,7 +287,7 @@
             <div class="row g-3">
               <div class="col-auto">
                 <div class="timeline-item-bar position-relative">
-                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-utensils text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-cogs text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                 </div>
               </div>
               <div class="col">
@@ -320,7 +320,7 @@
             <div class="row g-3">
               <div class="col-auto">
                 <div class="timeline-item-bar position-relative">
-                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-rocket text-info fs-9"></span></div>
+                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-paperclip text-info fs-9"></span></div>
                 </div>
               </div>
               <div class="col">
@@ -341,7 +341,7 @@
             <div class="row g-3">
               <div class="col-auto">
                 <div class="timeline-item-bar position-relative">
-                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-screwdriver-wrench text-warning fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-money-check text-success fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                 </div>
               </div>
               <div class="col">
@@ -363,7 +363,7 @@
             <div class="row g-3">
               <div class="col-auto">
                 <div class="timeline-item-bar position-relative">
-                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-paperclip text-info fs-9"></span></div>
+                  <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-file-pdf text-info fs-9"></span></div>
                 </div>
               </div>
               <div class="col">

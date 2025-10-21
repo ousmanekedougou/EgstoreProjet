@@ -38,7 +38,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-envelope text-danger fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-file-contract text-warning fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -71,7 +71,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-swatchbook text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-check-circle text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -109,13 +109,13 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-swatchbook text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-file-alt text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
                             <div class="d-flex justify-content-between">
                             <div class="d-flex mb-2">
-                                <h6 class="lh-sm mb-0 me-2 text-body-secondary timeline-item-title">Droits de E-Gstore</h6>
+                                <h6 class="lh-sm mb-0 me-2 text-body-secondary timeline-item-title">Les droits de E-Gstore</h6>
                             </div>
                             <p class="text-body-quaternary fs-9 mb-0 text-nowrap timeline-time"></p>
                             </div>
@@ -145,7 +145,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-swatchbook text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-hand-point-right text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -175,7 +175,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-swatchbook text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-wrench text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -205,7 +205,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-swatchbook text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-ruler-combined text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -235,7 +235,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-swatchbook text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-user-secret text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -282,7 +282,7 @@
                         <div class="row g-3">
                         <div class="col-auto">
                             <div class="timeline-item-bar position-relative">
-                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-swatchbook text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
+                            <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-tools text-primary fs-9"></span></div><span class="timeline-bar border-end border-dashed"></span>
                             </div>
                         </div>
                         <div class="col">
@@ -319,7 +319,7 @@
                         <div class="row g-3">
                             <div class="col-auto">
                                 <div class="timeline-item-bar position-relative">
-                                <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa-video text-info fs-9"></span></div>
+                                <div class="icon-item icon-item-md rounded-7 border border-translucent"><span class="fa-solid fa fa-arrow-alt-circle-down text-info fs-9"></span></div>
                                 </div>
                             </div>
                         </div>
