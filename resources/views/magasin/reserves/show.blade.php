@@ -5,7 +5,7 @@
     <div class="mb-9">
       <div class="row g-3 mb-4">
         <div class="col-auto">
-          <h2 class="mb-3">Produits sous reservation pro-format</h2>
+          <h2 class="mb-3">Produits sous résérvation pro-format</h2>
           <div class="d-sm-flex flex-between-center mb-3">
             <p class="text-body-secondary lh-sm mb-0 mt-2 mt-sm-0">
               Client : <a class="fw-bold" href="#!" style="margin-right: 15px;">  @if($reserve->user_id == '') {{ $reserve->name }} @else {{ $reserve->user->name }} @endif</a>

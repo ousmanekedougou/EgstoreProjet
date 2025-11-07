@@ -10,6 +10,8 @@ use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
+
 class SupplyOrderProductController extends Controller
 {
     public function __construct()
@@ -48,14 +50,20 @@ class SupplyOrderProductController extends Controller
         $this->validate($request,[
             'inputs' => 'required',
         ]);
-        // dd($request->inputs);
+        
         foreach ($request->inputs as $input) 
         {
-            $imageName = '';
-            if($input['image'])
-            {
+            if(array_key_exists('image',$request->inputs) && array_key_exists('error', $_FILES['image'])){
                 $imageName = $input['image']->store('public/Supplies/Products');
+            }else{
+                $imageName = null;
             }
+
+            // if($input['image'])
+            // {
+            //     $imageName = $input['image']->store('public/Supplies/Products');
+            // }
+
             $colors = null;
             $sizes = null;
     
@@ -221,6 +229,7 @@ class SupplyOrderProductController extends Controller
     {
         $product = SupplyOrderProduct::where('id',$id)->where('supply_order_id',request()->supply_order_id)->where('magasin_id',AuthMagasinAgent())->first();
         if ($product->supply_order->status == 2) {
+            Storage::delete($product->image);
             $product->delete();
             Toastr()->success('Votre produit a bien été supprimé', 'Suppression de bagages', ["positionClass" => "toast-top-right"]);
             return back();

@@ -1,5 +1,7 @@
 @extends('layouts.app',['title' => 'Unités de gestion'])
-
+ @section('headSection')
+  <link href="{{asset('vendors/choices/choices.min.css')}}" rel="stylesheet" />
+  @endsection
 @section('main-content')
   <div class="content">
 
@@ -270,4 +272,8 @@
     @include('layouts.footer_admin')
 
   </div>
+@endsection
+
+@section('footerSection')
+<script src="{{asset('vendors/choices/choices.min.js')}}"></script>
 @endsection

@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Magasin\Bagage;
 use App\Models\Magasin\Commande;
 use App\Models\Magasin\Product;
+use App\Models\Magasin\VendorSystem;
+use App\Models\Magasin\Unite;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
@@ -90,34 +92,44 @@ class BagageController extends Controller
         //     ]);
         // }
 
-        $this->validate($request,[
-            'unique_code' => 'required|string',
-            'quantity' => 'required|numeric',
+         $this->validate($request,[
+            'productId' => 'required|numeric',
+            'quantity'    => 'required|numeric',
+            'unity'    => 'required|numeric',
+            'color'       => 'required|string',
+            'size'        => 'required|string',
         ]);
 
-        $item_product = Product::where('unique_code',$request->unique_code)->where('magasin_id',AuthMagasinAgent())->first();
+        
+        $item_product = VendorSystem::where('product_id',$request->productId)->where('unite_id',$request->unity)->where('magasin_id',AuthMagasinAgent())->first();
+        
         // dd($item_product);
-        $bagage_existe = Bagage::where('unique_code',$request->unique_code)->where('color',$request->color)->where('size',$request->size)->first();
+        
+        $bagage_existe = Bagage::where('name',$item_product->product->name)->where('color',$request->color)->where('size',$request->size)->first();
+
+        $unity = Unite::where('id',$request->unity)->first();
+
         // dd($bagage_existe);
         if(!$bagage_existe){
 
-            if($item_product->quantity > 0){
-                if ($item_product->quantity >= $request->quantity) {
+            if($item_product->product->quantity > 0){
+                if ($item_product->product->quantity >= $request->quantity) {
                     
                     Bagage::create([
-                        'name' => $item_product->name,
-                        'slug' => $item_product->slug,
-                        'reference' => $item_product->reference,
-                        'price' => $item_product->price,
+                        'name' => $item_product->product->name,
+                        'slug' => $item_product->product->slug,
+                        'reference' => $item_product->product->reference,
+                        'price' => $item_product->price_vente,
+                        'image' => $item_product->product->image,
                         'quantity' => $request->quantity,
-                        'image' => $item_product->image,
                         'type' => $request->type,
-                        'amount' => $item_product->price * $request->quantity,
+                        'amount' => $item_product->price_vente * $request->quantity,
                         'date' => now(),
                         'color' => $request->color,
                         'size' => $request->size,
-                        'unique_code' => $item_product->unique_code,
-                        'exp_date' => $item_product->exp_date,
+                        'unite' => $unity->name,
+                        'unique_code' => $item_product->product->unique_code,
+                        'exp_date' => $item_product->product->exp_date,
                         'magasin_id' => AuthMagasinAgent(),
                         'commande_id' => $request->reserve_id
                     ]);
@@ -130,18 +142,18 @@ class BagageController extends Controller
 
                     $item_product->update(['quantity' => $item_product->quantity - $request->quantity]);
                     
-                    Toastr()->success('Votre bagage a bien été ajouté', 'Ajout de bagages', ["positionClass" => "toast-top-right"]);
+                    Toastr()->success('Votre bagage a bien été ajouté', 'Ajout de produits', ["positionClass" => "toast-top-right"]);
                     return back();
                 }else{
-                    Toastr()->warning('Cette quantite n\'existe pas pour ce produit', 'Ajout de bagages', ["positionClass" => "toast-top-right"]);
+                    Toastr()->warning('Cette quantite n\'existe pas pour ce produit', 'Ajout de produits', ["positionClass" => "toast-top-right"]);
                     return back();
                 }
             }else{
-                Toastr()->error('Ce produits est epuisé', 'Ajout de bagages', ["positionClass" => "toast-top-right"]);
+                Toastr()->error('Ce produits est epuisé', 'Ajout de produits', ["positionClass" => "toast-top-right"]);
                 return back();
             }
         }else{
-            Toastr()->warning('Ce produits est existe pour cette commande', 'Ajout de bagages', ["positionClass" => "toast-top-right"]);
+            Toastr()->warning('Ce produits est existe pour cette commande', 'Ajout de produits', ["positionClass" => "toast-top-right"]);
             return back();
         }
     }

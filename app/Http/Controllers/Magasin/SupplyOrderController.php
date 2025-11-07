@@ -59,12 +59,16 @@ class SupplyOrderController extends Controller
         }
 
         $verifyBonCommande = SupplyOrder::where("magasin_id", AuthMagasinAgent())->where('supply_id',$request->supply_id)->where('bon_commande',$request->bon_commande)->first();
-        $supply_magasin = Supply::where('id',$request->supply_id)->first();
         // dd($supply_magasin);
         if ($verifyBonCommande) {
             Toastr()->error('Ce bon de commande éxiste pour ce magasin', 'Bon éxistant', ["positionClass" => "toast-top-right"]);
             return back();
         }else {
+            $supply_magasin = Supply::where('id',$request->supply_id)->first();
+            $request_id = null;
+            if($supply_magasin->id != null){
+                $request_id = $supply_magasin->id;
+            }
              SupplyOrder::create([
                 'order' => $newOrder,
                 'bon_commande' => $request->bon_commande,
@@ -74,7 +78,7 @@ class SupplyOrderController extends Controller
                 'magasin_id' => AuthMagasinAgent(),
                 'status' => 2,
                 'delivery' => 2,
-                'request_id' => $supply_magasin->magasin->id
+                'request_id' => $request_id
             ]);
             Toastr()->success('Votre commande de devis a bien été ajouté', 'Ajout de commande devis', ["positionClass" => "toast-top-right"]);
             return back();

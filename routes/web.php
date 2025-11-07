@@ -106,7 +106,7 @@ Route::prefix('/magasin')->name('magasin.')->group(function() {
     Route::resource('/bon', App\Http\Controllers\Magasin\BonController::class);
     Route::get('bon/delete/{id}',[App\Http\Controllers\Magasin\BonController::class,'delete'])->name('bon.delete');
     Route::put('bon/validation/{id}',[App\Http\Controllers\Magasin\BonController::class,'validation'])->name('bon.validation');
-    // Route::post('post',[App\Http\Controllers\Magasin\BonController::class,'post'])->name('bon.post');
+    Route::get('/getProductOption/{id}',[App\Http\Controllers\Magasin\BonController::class,'getProductOption'])->name('bon.getProductOption');
     Route::post('reserve/post',[App\Http\Controllers\Magasin\ReservationController::class,'post'])->name('reserve.post');
     Route::get('reserve/delete/{id}',[App\Http\Controllers\Magasin\ReservationController::class,'delete'])->name('reserve.delete');
 

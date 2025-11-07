@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('unique_code')->unique()->nullable();
             $table->string('color')->nullable();
             $table->string('size')->nullable();
+            $table->string('unite')->nullable();
             $table->date('exp_date')->nullable();
             $table
                 ->foreignId("commande_id")

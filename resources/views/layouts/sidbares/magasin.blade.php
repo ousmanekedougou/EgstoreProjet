@@ -42,11 +42,11 @@
                     <hr class="navbar-vertical-line" /><!-- parent pages-->
                     <div class="nav-item-wrapper">
                         <a class="nav-link label-1 {{ set_active_roote('magasin.categorie.index') }}" href="{{ route('magasin.categorie.index') }}" role="button" data-bs-toggle="" aria-expanded="false">
-                            <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="menu"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Vos catégories</span></span></div>
+                            <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="menu"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Catégories</span></span></div>
                         </a>
                         {{--
                         <a class="nav-link label-1 {{ set_active_roote('magasin.produit.index') }}" href="{{ route('magasin.produit.index') }}" role="button" data-bs-toggle="" aria-expanded="false">
-                            <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="shopping-bag"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Vos produits</span></span></div>
+                            <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="shopping-bag"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Produits</span></span></div>
                         </a>
                         --}}
                     </div><!-- parent pages-->
@@ -61,13 +61,13 @@
 
                     <div class="nav-item-wrapper">
                         <a class="nav-link label-1 {{ set_active_roote('magasin.reserve.index') }}" href="{{ route('magasin.reserve.index') }}" role="button" data-bs-toggle="" aria-expanded="false">
-                            <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="file-plus"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Réservations</span></span></div>
+                            <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="file-plus"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Pro-format</span></span></div>
                         </a>
                     </div><!-- parent pages-->
 
                     <div class="nav-item-wrapper">
                         <a class="nav-link label-1 {{ set_active_roote('magasin.bon.index') }}" href="{{ route('magasin.bon.index') }}" role="button" data-bs-toggle="" aria-expanded="false">
-                            <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="file-text"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Bons de commandes</span></span></div>
+                            <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="file-text"></span></span><span class="nav-link-text-wrapper"><span class="nav-link-text">Bons mensuelle</span></span></div>
                         </a>
                     </div><!-- parent pages-->
 

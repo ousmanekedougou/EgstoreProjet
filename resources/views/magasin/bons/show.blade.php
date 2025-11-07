@@ -1,6 +1,7 @@
 @extends('layouts.app',['title' => 'affichage des bon de commande'])
   @section('headSection')
   <link href="{{asset('vendors/choices/choices.min.css')}}" rel="stylesheet" />
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   @endsection
 @section('main-content')
   <div class="content">
@@ -50,6 +51,7 @@
                   <th class="sort align-middle text-end ps-4" scope="col" data-sort="price" style="width:150px;">CODE-U</th>
                   <th class="sort align-middle ps-3 w-auto" scope="col" data-sort="tags">COULEURS</th>
                   <th class="sort align-middle ps-3 w-auto" scope="col" data-sort="vendor">TAILLES</th>
+                  <th class="sort align-middle ps-3 w-auto" scope="col" data-sort="vendor">UNITES</th>
                   <th class="sort align-middle text-end ps-4" scope="col" data-sort="price" style="width:150px;">QUANTITES</th>
                   <th class="sort align-middle text-end ps-4" scope="col" data-sort="price" style="width:150px;">PRIX UNITAIRE</th>
                   <th class="sort align-middle text-end ps-4" scope="col" data-sort="price" style="width:150px;">PRIX TOTAL</th>
@@ -64,10 +66,13 @@
                     <td class="product align-middle ps-4" data-bs-toggle="modal" data-bs-target="#scrollingLong-{{ $product->id }}"><a href="#" class="fw-semibold line-clamp-3 mb-0">{{ $product->name }}</a></td>
                     <td class="price align-middle white-space-nowrap text-center fw-bold text-body-tertiary ps-4">{{ $product->unique_code }}</td>
                     <td class="total-spent align-middle white-space-nowrap fw-bold text-end ps-3 text-body-emphasis">
-                      <span class="badge badge-phoenix badge-phoenix-primary">{{ $product->color }}</span> 
+                      <span class="badge badge-phoenix badge-phoenix-secondary">{{ $product->color }}</span> 
                     </td>
                     <td class="total-spent align-middle white-space-nowrap fw-bold text-end ps-3 text-body-emphasis">
-                      <span class="badge badge-phoenix badge-phoenix-success">{{ $product->size }}</span> 
+                      <span class="badge badge-phoenix badge-phoenix-secondary">{{ $product->size }}</span> 
+                    </td>
+                    <td class="total-spent align-middle white-space-nowrap fw-bold text-end ps-3 text-body-emphasis">
+                      <span class="badge badge-phoenix badge-phoenix-secondary">{{ $product->unite }}</span> 
                     </td>
                     <td class="price align-middle white-space-nowrap text-center fw-bold text-body-tertiary ps-4">{{ $product->quantity }}</td>
                     <td class="price align-middle white-space-nowrap text-center fw-bold text-body-tertiary ps-4">{{ $product->getPrice() }}</td>
@@ -116,13 +121,53 @@
               <input type="hidden" name="type" value="0">
 
               <div class="mb-3 text-start">
-                <label class="form-label" for="unique_code">Code unique du produit</label>
-                <input id="unique_code" type="text" placeholder="Code unique du produit" class="form-control @error('unique_code') is-invalid @enderror" name="unique_code" value="{{ old('unique_code') }}" required autocomplete="unique_code" autofocus>
+                <label class="form-label" for="productId">Choisire votre produit</label>
+                <select class="form-select @error('productId') is-invalid @enderror" name="productId" id="productId" data-choices="data-choices" data-options='{"removeItemButton":true,"placeholder":true}'>
+                  <option value="">Sélectionner le produit</option>
+                  @foreach ($products as $product)
+                    <option value="{{ old('productId') ?? $product->id }}"> {{ $product->name }}</option>
+                  @endforeach
+                </select>
+                @error('productId')
+                  <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                  </span>
+                @enderror
+              </div>
 
-                @error('unique_code')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
+              <div class="mb-3 text-start">
+                <label class="form-label" for="unity">Choisire l'unites</label>
+                <select class="form-select @error('unity') is-invalid @enderror" name="unity" id="unity" data-options='{"removeItemButton":true,"placeholder":true}'>
+                  <option >Sélectionner un...</option>
+                </select>
+                @error('unity')
+                  <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                  </span>
+                @enderror
+              </div>
+
+              <div class="mb-3 text-start">
+                <label class="form-label" for="color">Choisire la couleur</label>
+                <select class="form-select @error('color') is-invalid @enderror" name="color" id="color" data-options='{"removeItemButton":true,"placeholder":true}'>
+                  <option >Sélectionner une...</option>
+                </select>
+                @error('color')
+                  <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                  </span>
+                @enderror
+              </div>
+
+              <div class="mb-3 text-start">
+                <label class="form-label" for="size">Choisire la taille</label>
+                <select class="form-select @error('size') is-invalid @enderror" name="size" id="size" data-options='{"removeItemButton":true,"placeholder":true}'>
+                  <option >Sélectionner une...</option>
+                </select>
+                @error('size')
+                  <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                  </span>
                 @enderror
               </div>
 
@@ -131,43 +176,6 @@
                 <input id="quantity" type="numeric" class="form-control @error('quantity') is-invalid @enderror" name="quantity" value="{{ old('quantity') }}" placeholder="Quantite du produit" required autocomplete="quantity">
 
                 @error('quantity')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-              </div>
-
-              <div class="mb-3 text-start">
-                <label class="form-label" for="organizerSingle">Choisire l'unites</label>
-                <select class="form-select @error('unite_id') is-invalid @enderror" name="unite_id" id="organizerSingle" data-choices="data-choices" data-options='{"removeItemButton":true,"placeholder":true}'>
-                  <option value="">Sélectionner un...</option>
-                  @foreach ($unites as $unite)
-                    <option value="{{ old('unite_id') ?? $unite->id }}"> {{ $unite->name }}</option>
-                  @endforeach
-                </select>
-                @error('unite_id')
-                  <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                  </span>
-                @enderror
-              </div>
-
-              <div class="mb-3 text-start">
-                <label class="form-label" for="color">Couleur de votre produit</label>
-                <input id="color" type="text" placeholder="Couleur de votre produit" class="form-control @error('color') is-invalid @enderror" name="color" value="{{ old('color') }}" required autocomplete="color" autofocus>
-
-                @error('color')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-              </div>
-
-              <div class="mb-3 text-start">
-                <label class="form-label" for="size">Taille de votre produit</label>
-                <input id="size" type="text" placeholder="TYaille de votre produit" class="form-control @error('size') is-invalid @enderror" name="size" value="{{ old('size') }}" required autocomplete="size" autofocus>
-
-                @error('size')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -306,6 +314,11 @@
 <script src="{{ asset('assets/js/bootstrap-tagsinput.js') }}"></script> 
 <script src="{{asset('vendors/choices/choices.min.js')}}"></script>
 <script>
+  $.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
   $(document).ready(function(){
     var i = 0;
     $('#add').click(function(){
@@ -341,6 +354,41 @@
 
     $(document).on('click','.remove-table-row', function(){
       $(this).parents('tr').remove();
+    });
+
+    $("#productId").change(function () {
+      var productId = $(this).val();
+      
+      $.ajax({
+        url:'{{ url("/magasin/getProductOption") }}/' + productId,
+        type:"get",
+        dataType:"json",
+        success: function(response){
+          $("#unity").find('option:not(:first)').remove();
+          $("#color").find('option:not(:first)').remove();
+          $("#size").find('option:not(:first)').remove();
+
+          if (response['unites'].length > 0) {
+            $.each(response['unites'], function (key, value) {
+              $("#unity").append("<option value='" + value['id'] + "'>" + value['name'] + "</option>")
+            });
+          }
+
+          if (response['colors'].length > 0) {
+            $.each(response['colors'], function (key, value) {
+              $("#color").append("<option value='" + value['name'] + "'>" + value['name'] + "</option>")
+            });
+          }
+
+          if (response['sizes'].length > 0) {
+            $.each(response['sizes'], function (key, value) {
+              $("#size").append("<option value='" + value['name'] + "'>" + value['name'] + "</option>")
+            });
+          }
+        }
+      });
+
+
     });
 
   });

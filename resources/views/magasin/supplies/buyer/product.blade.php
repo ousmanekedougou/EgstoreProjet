@@ -55,7 +55,17 @@
                 @foreach($supplyOrder->supply_order_products as $product)
                   <tr class="position-static">
                     
-                    <td class="align-middle white-space-nowrap py-0"><a href="#!" class="d-block border border-translucent rounded-2"  data-bs-toggle="modal" data-bs-target="#scrollingLong-{{ $product->id }} "><img src="{{Storage::url($product->image)}}" alt="" width="53" /></a></td>
+                    <td class="align-middle white-space-nowrap py-0">
+                      <a href="#!" class="d-block border border-translucent rounded-2"  data-bs-toggle="modal" data-bs-target="#scrollingLong-{{ $product->id }} ">
+                        <img src="
+                                @if ($product->image == '')
+                                  https://ui-avatars.com/api/?name={{ $product->name }} 
+                                @else
+                                  {{Storage::url($product->image)}}
+                                @endif
+                                " alt="" width="53" />
+                      </a>
+                    </td>
                     <td class="product align-middle ps-4"><a href="#!" class="fw-semibold line-clamp-3 mb-0"  data-bs-toggle="modal" data-bs-target="#scrollingLong-{{ $product->id }}">{{ $product->name }}</a></td>
                     <td class="price align-middle white-space-nowrap text-start fw-bold text-body-tertiary ps-4">@if ($product->reference != '') {{ $product->reference }} @else null @endif</td>
                     <td class="price align-middle white-space-nowrap text-center fw-bold text-body-tertiary ps-4">{{ $product->quantity }}</td>

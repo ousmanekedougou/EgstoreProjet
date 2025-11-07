@@ -284,7 +284,8 @@ class ProduitController extends Controller
                 'exp_date' => $request->exp_date,
                 'supply_id' => $supplyId,
                 'magasin_id' => AuthMagasinAgent(),
-                'sub_category_id' => $request->sub_category_id
+                'sub_category_id' => $request->sub_category_id,
+                'unique_code' => $product->magasin->prefix.'-'.str_pad($id, 6, '0', STR_PAD_LEFT)
             ]);
 
             Toastr()->success('Votre produit a bien été modifié', 'Modification de produits', ["positionClass" => "toast-top-right"]);

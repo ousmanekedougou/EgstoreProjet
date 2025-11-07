@@ -4,9 +4,14 @@ namespace App\Http\Controllers\Magasin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Magasin\Client;
+use App\Models\Magasin\Color;
 use App\Models\Magasin\Commande;
 use App\Models\Magasin\Magasin;
+use App\Models\Magasin\Product;
+use App\Models\Magasin\ProductColorSize;
+use App\Models\Magasin\Size;
 use App\Models\Magasin\Unite;
+use App\Models\Magasin\VendorSystem;
 use App\Models\User\User;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
@@ -100,6 +105,21 @@ class BonController extends Controller
     //     return back();
     // }
 
+    
+    public function getProductOption(int $id){
+        $getUnityId = VendorSystem::where('product_id',$id)->where('magasin_id',AuthMagasinAgent())->get('unite_id');
+        $colors = Color::where('product_id',$id)->where('magasin_id',AuthMagasinAgent())->get();
+        $sizes = Size::where('product_id',$id)->where('magasin_id',AuthMagasinAgent())->get();
+        $unites = Unite::whereIn('id', $getUnityId)->get();
+        
+        return response()->json([
+            'status' => 1,
+            'unites' => $unites,
+            'colors' => $colors,
+            'sizes' => $sizes
+        ]);
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -186,9 +206,11 @@ class BonController extends Controller
         return view('magasin.bons.show',
         [
             'bon' => Commande::where('id',$id)->where('magasin_id',AuthMagasinAgent())->where('type',0)->first(),
-            'unites'  => Unite::where('magasin_id',AuthMagasinAgent())->where('visible',1)->get()
+            'unites'  => Unite::where('magasin_id',AuthMagasinAgent())->where('visible',1)->get(),
+            'products'  => Product::where('magasin_id',AuthMagasinAgent())->where('visible',1)->get()
         ]);
     }
+
 
     /**
      * Show the form for editing the specified resource.

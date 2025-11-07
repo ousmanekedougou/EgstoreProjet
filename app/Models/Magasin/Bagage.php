@@ -24,6 +24,7 @@ class Bagage extends Model
         'images',
         'color',
         'size',
+        'unite',
         'unique_code',
         'exp_date',
     ];
