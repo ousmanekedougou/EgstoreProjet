@@ -13,7 +13,7 @@
           <div class="d-sm-flex flex-between-center mb-3">
             <p class="text-body-secondary lh-sm mb-0 mt-2 mt-sm-0">
               Client : <a class="fw-bold" href="#!" style="margin-right: 15px;">  @if($bon->user_id == '') {{ $bon->name }} @else {{ $bon->user->name }} @endif</a>
-              Téléone : <a class="fw-bold" href="#!"> @if($bon->user_id == '') {{ $bon->phone }} @else {{ $bon->user->phone }} @endif</a>
+              Téléphone : <a class="fw-bold" href="#!"> @if($bon->user_id == '') {{ $bon->phone }} @else {{ $bon->user->phone }} @endif</a>
             </p>
           </div>
         </div>
