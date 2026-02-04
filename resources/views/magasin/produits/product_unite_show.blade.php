@@ -13,15 +13,13 @@
       </div>
       <div id="products" data-list='{"valueNames":["customer","email","total-orders","total-spent","city","last-seen","last-order"]}'>
         <div class="mb-4">
-          <div class="row g-3">
-            <div class="col-auto">
-              <div class="search-box" style="width: 70%;">
-                <form class="position-relative"><input class="form-control search-input search" type="search" placeholder="Rechercher une unite" aria-label="Search" />
-                  <span class="fas fa-search search-box-icon"></span>
-                </form>
-              </div>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="search-box" style="width: 70%;">
+              <form class="position-relative"><input class="form-control search-input search" type="search" placeholder="Rechercher une unite" aria-label="Search" />
+                <span class="fas fa-search search-box-icon"></span>
+              </form>
             </div>
-            <div class="col-auto ms-auto">
+            <div class="ms-xxl-auto ms-auto">
                 <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                   <span class="me-2" data-feather="plus"></span>Ajouter une unité pour ce produit
               </button>
@@ -39,7 +37,7 @@
                   <th class="sort align-middle text-center" scope="col" data-sort="total-orders" style="width:10%">Prix d'achats</th>
                   <th class="sort align-middle text-center" scope="col" data-sort="total-orders" style="width:10%">Prix de vente</th>
                   <th class="sort align-middle text-center" scope="col" data-sort="total-orders" style="width:10%">Prix de revenu</th>
-                  <th class="sort align-middle text-end" scope="col" data-sort="total-orders" style="width:10%">status</th>
+                  <th class="sort align-middle text-end" scope="col" data-sort="total-orders" style="width:10%">Status</th>
                   <th class="sort align-middle text-end ps-3" scope="col" data-sort="total-spent" style="width:10%">ACTIONS</th>
                 </tr>
               </thead>

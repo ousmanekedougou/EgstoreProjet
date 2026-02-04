@@ -73,7 +73,7 @@
                 @else
                   {{$product->supply->name}}
                 @endif
-                
+              
               </p>
             </div>
             <div>

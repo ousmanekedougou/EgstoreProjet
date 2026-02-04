@@ -6,7 +6,7 @@
     <div class="mb-9">
       <div class="row g-2 mb-4">
         <div class="col-auto">
-          <h2 class="mb-0">Vos unités de gestion </h2>
+          <h2 class="mb-0">Vos unités de géstion </h2>
         </div>
       </div>
       <div id="products" data-list='{"valueNames":["customer","email","total-orders","total-spent","city","last-seen","last-order"]}'>
@@ -31,7 +31,7 @@
                 <tr>
                   <th class="sort align-middle pe-5" scope="col" data-sort="customer" style="width:10%;">Unités</th>
                   <th class="sort align-middle text-center" scope="col" data-sort="total-orders" style="width:10%">Code</th>
-                  <th class="sort align-middle text-end" scope="col" data-sort="total-orders" style="width:10%">Visibilite</th>
+                  <th class="sort align-middle text-end" scope="col" data-sort="total-orders" style="width:10%">Visibilité</th>
                   <th class="sort align-middle text-end ps-3" scope="col" data-sort="total-spent" style="width:10%">ACTIONS</th>
                 </tr>
               </thead>

@@ -151,6 +151,7 @@ class ProduitController extends Controller
                     'magasin_id' => AuthMagasinAgent(),
                 ]);
                 $product->update(['price' => $request->price_vente,'unique_code' => $product->magasin->prefix.'-'.str_pad($product->id, 6, '0', STR_PAD_LEFT)]);
+               
                 
                 Toastr()->success('Votre produit a bien été ajouté', 'Ajout de produits', ["positionClass" => "toast-top-right"]);
                 return back();
@@ -205,96 +206,96 @@ class ProduitController extends Controller
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg,webp',
         ]);
-        $productExist = Product::where('name',$request->name)->where('magasin_id',AuthMagasinAgent())->first();
-        if(!$productExist){
 
-            $validatePromotion = '';
-            $promot = null;
-            $supplyId = null;
-            
-            $product = Product::where('id',$id)->where('magasin_id',AuthMagasinAgent())->first();
+        $validatePromotion = '';
+        $promot = null;
+        $supplyId = null;
+        
+        $product = Product::where('id',$id)->where('magasin_id',AuthMagasinAgent())->first();
 
-            if($request->promot == null){
-                $validatePromotion = null;
+        if($request->promot == null){
+            $validatePromotion = null;
+        }else {
+            if($request->price_promotion < $request->price){
+                $validatePromotion = $request->price_promotion;
             }else {
-                if($request->price_promotion < $request->price){
-                    $validatePromotion = $request->price_promotion;
-                }else {
-                    Toastr()->error('Le prix de la promotion doit etre inférieure au prix normale', 'Pprix de la promotion', ["positionClass" => "toast-top-right"]);
-                    return back();
-                }
+                Toastr()->error('Le prix de la promotion doit etre inférieure au prix normale', 'Pprix de la promotion', ["positionClass" => "toast-top-right"]);
+                return back();
             }
-
-            $imageName = '';
-            if($request->hasFile('image'))
-            {
-                Storage::delete($product->image);
-                // $imageName = $request->image->store('public/Products');
-                $file = $request->file('image');
-
-                $Name = $request->name.'-'.Auth::guard('magasin')->user()->name.'.'. $file->getClientOriginalExtension();
-                $image = Image::read($file);
-                // Resize image
-                $image->resize(530, 530, function ($constraint) {
-                    $constraint->aspectRatio();
-                })->save(storage_path('app/public/Products/' . $Name));
-
-                $imageName = 'public/Products/'. $Name;
-            }else{
-                $imageName = $product->image;
-            }
-
-            // $data = [];
-            // $imagesUpdate = '';
-            // if ($request->hasFile('images')) {
-            //     foreach ($request->images as $image) {
-            //         $imageStore = $image->store('Products/ImageSimilaires/');
-            //         $data[] = $imageStore;
-            //     }
-            //     $imagesUpdate = json_encode($data);
-            // }else {
-            //     $imagesUpdate = $product->images;
-            // }
-
-            if ($request->promot != null) {
-                $promot = 1;
-            }else {
-                $promot = 0;
-            }
-
-            if ($request->supply_id != null) {
-                $supplyId = $request->supply_id;
-            }else{
-                 $supplyId = $product->supply_id;
-            }
-
-            $product->update([
-                'name' => $request->name,
-                'slug' => str_replace('/','',Hash::make(Str::random(2).$request->name)),
-                'reference' => $request->reference,
-                'quantity' => $request->quantity,
-                'stock' => $request->quantity,
-                'qty_alert' => $request->qty_alert,
-                'desc' => $request->desc,
-                'image' => $imageName,
-                // 'images' => $imagesUpdate,
-                'visible' => $request->visible,
-                'promot' => $promot,
-                'promo_price' => $validatePromotion,
-                'exp_date' => $request->exp_date,
-                'supply_id' => $supplyId,
-                'magasin_id' => AuthMagasinAgent(),
-                'sub_category_id' => $request->sub_category_id,
-                'unique_code' => $product->magasin->prefix.'-'.str_pad($id, 6, '0', STR_PAD_LEFT)
-            ]);
-
-            Toastr()->success('Votre produit a bien été modifié', 'Modification de produits', ["positionClass" => "toast-top-right"]);
-            return back();
-
-        }else{
-            Toastr()->error('Ce produit existe dans votre stock', 'Ajout de produit', ["positionClass" => "toast-top-right"]);
-            return back();
         }
+
+        $imageName = '';
+        if($request->hasFile('image'))
+        {
+            Storage::delete($product->image);
+            // $imageName = $request->image->store('public/Products');
+            $file = $request->file('image');
+
+            $Name = $request->name.'-'.Auth::guard('magasin')->user()->name.'.'. $file->getClientOriginalExtension();
+            $image = Image::read($file);
+            // Resize image
+            $image->resize(530, 530, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save(storage_path('app/public/Products/' . $Name));
+
+            $imageName = 'public/Products/'. $Name;
+        }else{
+            $imageName = $product->image;
+        }
+
+        // $data = [];
+        // $imagesUpdate = '';
+        // if ($request->hasFile('images')) {
+        //     foreach ($request->images as $image) {
+        //         $imageStore = $image->store('Products/ImageSimilaires/');
+        //         $data[] = $imageStore;
+        //     }
+        //     $imagesUpdate = json_encode($data);
+        // }else {
+        //     $imagesUpdate = $product->images;
+        // }
+
+        if ($request->promot != null) {
+            $promot = 1;
+        }else {
+            $promot = 0;
+        }
+
+        if ($request->supply_id != null) {
+            $supplyId = $request->supply_id;
+        }else{
+                $supplyId = $product->supply_id;
+        }
+        $getUnitePrice = VendorSystem::Where('product_id',$product->id)->where('status',1)->first();
+
+        // dd($getUnitePrice->price_vente);
+
+        $product->update([
+            'name' => $request->name,
+            'slug' => str_replace('/','',Hash::make(Str::random(2).$request->name)),
+            'reference' => $request->reference,
+            'price' => $getUnitePrice->price_vente,
+            'quantity' => $request->quantity,
+            'stock' => $request->quantity,
+            'qty_alert' => $request->qty_alert,
+            'desc' => $request->desc,
+            'image' => $imageName,
+            // 'images' => $imagesUpdate,
+            'visible' => $request->visible,
+            'promot' => $promot,
+            'promo_price' => $validatePromotion,
+            'exp_date' => $request->exp_date,
+            'supply_id' => $supplyId,
+            'magasin_id' => AuthMagasinAgent(),
+            'sub_category_id' => $request->sub_category_id,
+            'unique_code' => $product->magasin->prefix.'-'.str_pad($id, 6, '0', STR_PAD_LEFT)
+        ]);
+
+
+        Toastr()->success('Votre produit a bien été modifié', 'Modification de produits', ["positionClass" => "toast-top-right"]);
+        return back();
+
+        
     }
 
     /**
